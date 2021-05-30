@@ -6,7 +6,8 @@ from datetime import datetime
 
 import requests
 
-artifact_url = 'https://repo.maven.apache.org/maven2/com/google/guava/guava/21.0/'
+# artifact_url = 'https://repo.maven.apache.org/maven2/com/google/guava/guava/21.0/'
+artifact_url = 'https://repo1.maven.org/maven2/com/google/guava/guava/21.0/'
 request_params = {'proxies': 'http://127.0.0.1:6152'}
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
