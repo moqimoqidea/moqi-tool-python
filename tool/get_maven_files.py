@@ -1,6 +1,7 @@
 import os
 import re
 import threading
+import time
 from datetime import datetime
 
 import requests
@@ -31,6 +32,8 @@ def download_file(file_dir, url):
 
 
 if __name__ == '__main__':
+    print('all start...')
+    start_time = time.time()
     os.chdir('../maven_repo')
     maven_repo_dir = os.getcwd()
     print('maven_repo_dir is %s' % maven_repo_dir)
@@ -48,4 +51,6 @@ if __name__ == '__main__':
     for downloadThread in downloadThreads:
         downloadThread.join()
 
-    print('\nall done!')
+    end_time = time.time()
+    print('\nit cost time: %d' % (end_time - start_time))
+    print('all done!')
